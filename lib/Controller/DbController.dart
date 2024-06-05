@@ -24,4 +24,10 @@ class DbController extends ChangeNotifier {
     logger.i(allLikeQuotesData);
     initData();
   }
+
+  void DeleteData({required int id}) {
+    DbHelper.dbHelper.deleteData(id: id);
+    logger.i(allLikeQuotesData);
+    initData();
+  }
 }

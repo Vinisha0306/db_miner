@@ -62,4 +62,19 @@ class DbHelper {
 
     return allLikeData;
   }
+
+  Future<void> deleteData({required int id}) async {
+    await database
+        .delete(
+          tableName,
+          where: "id=?",
+          whereArgs: [id],
+        )
+        .then(
+          (value) => logger.i('Deleted'),
+        )
+        .onError(
+          (error, stackTrace) => logger.e('Error : $error'),
+        );
+  }
 }
