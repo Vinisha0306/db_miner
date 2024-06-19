@@ -34,7 +34,7 @@ class DetailsPage extends StatelessWidget {
                 color: Colors.purple.shade300,
                 image: DecorationImage(
                   image: NetworkImage(listnable.image),
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
               ),
               alignment: Alignment.center,
@@ -79,7 +79,7 @@ class DetailsPage extends StatelessWidget {
                               Provider.of<WallPaperController>(context)
                                   .allWallPaper[index]
                                   .largeImageUrl),
-                          fit: BoxFit.cover,
+                          fit: BoxFit.fill,
                         ),
                       ),
                     ),

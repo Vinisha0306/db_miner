@@ -58,13 +58,16 @@ class HomePage extends StatelessWidget {
                       image: const DecorationImage(
                         image: NetworkImage(
                             'https://i.pinimg.com/564x/50/d5/f4/50d5f4e6d5656c0bbc57c0c32e90b6b5.jpg'),
-                        fit: BoxFit.cover,
+                        fit: BoxFit.fill,
                       ),
                     ),
-                    child: Text(
-                      listnable.allQuotes[index].text,
-                      style: TextStyle(
-                        color: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.all(32.0),
+                      child: Text(
+                        listnable.allQuotes[index].text,
+                        style: const TextStyle(
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
